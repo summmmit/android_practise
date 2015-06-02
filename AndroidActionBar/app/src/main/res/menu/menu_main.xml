@@ -1,0 +1,28 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:yourapp="http://schemas.android.com/apk/res-auto">
+    <!-- Search / will display always -->
+
+    <item android:id="@+id/action_search"
+        android:title="@string/action_search"
+        yourapp:showAsAction="ifRoom"/>
+
+    <!-- Location Found -->
+    <item android:id="@+id/action_location_found"
+        android:title="@string/action_location_found"
+        yourapp:showAsAction="never" />
+
+    <!-- Refresh -->
+    <item android:id="@+id/action_refresh"
+        android:title="@string/action_refresh"
+        yourapp:showAsAction="never" />
+
+    <!-- Help -->
+    <item android:id="@+id/action_help"
+        android:title="@string/action_help"
+        yourapp:showAsAction="never"/>
+
+    <!-- Check updates -->
+    <item android:id="@+id/action_check_updates"
+        android:title="@string/action_check_updates"
+        yourapp:showAsAction="never" />
+</menu>

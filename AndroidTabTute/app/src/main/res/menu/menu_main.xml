@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:androidtabtute="http://schemas.android.com/apk/res-auto">
+    <!-- Search / will display always -->
+    <item android:id="@+id/action_search"
+        android:title="@string/action_search"
+        androidtabtute:showAsAction="ifRoom"
+        android:actionViewClass="android.widget.SearchView"/>
+
+    <!-- Location Found -->
+    <item android:id="@+id/action_location_found"
+        android:title="@string/action_location_found"
+        androidtabtute:showAsAction="never" />
+
+    <!-- Refresh -->
+    <item android:id="@+id/action_refresh"
+        android:title="@string/action_refresh"
+        androidtabtute:showAsAction="never" />
+
+    <!-- Help -->
+    <item android:id="@+id/action_help"
+        android:title="@string/action_help"
+        androidtabtute:showAsAction="never"/>
+
+    <!-- Check updates -->
+    <item android:id="@+id/action_check_updates"
+        android:title="@string/action_check_updates"
+        androidtabtute:showAsAction="never" />
+</menu>
