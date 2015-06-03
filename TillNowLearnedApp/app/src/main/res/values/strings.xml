@@ -9,4 +9,5 @@
     <string name="title_activity_click_events">ClickEventsActivity</string>
     <string name="title_activity_gestures">GesturesActivity</string>
     <string name="title_activity_fragments">FragmentsActivity</string>
+    <string name="title_activity_splash">SplashActivity</string>
 </resources>
