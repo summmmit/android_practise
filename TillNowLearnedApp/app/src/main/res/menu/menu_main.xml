@@ -1,0 +1,21 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+    <item
+        android:id="@+id/action_click_events"
+        android:orderInCategory="1"
+        android:title="@string/action_click_events"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_gestures"
+        android:orderInCategory="2"
+        android:title="@string/action_gestures"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_fragments"
+        android:orderInCategory="3"
+        android:title="@string/action_fragments"
+        app:showAsAction="never" />
+
+</menu>

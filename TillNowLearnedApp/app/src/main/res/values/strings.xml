@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Android</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_click_events">Click Events</string>
+    <string name="action_gestures">Gestures</string>
+    <string name="action_fragments">Fragments</string>
+    <string name="title_activity_click_events">ClickEventsActivity</string>
+    <string name="title_activity_gestures">GesturesActivity</string>
+    <string name="title_activity_fragments">FragmentsActivity</string>
+</resources>
