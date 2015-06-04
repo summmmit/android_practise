@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">SplashActivity</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_fragments">Fragments</string>
+    <string name="action_click_events">Click Events</string>
+
+    <string name="title_activity_main">Android</string>
+    <string name="welcome_text">Welcome Friend</string>
+
+    <string name="title_activity_fragments">Fragments</string>
+
+    <string name="title_activity_click_events">Click Events</string>
+    <string name="button_top_fragment">Click Me</string>
+    <string name="bottom_fragment_text_top">Bottom Fragment Text Top</string>
+    <string name="bottom_fragment_text_bottom">Bottom Fragment Text Bottom</string>
+
+</resources>
