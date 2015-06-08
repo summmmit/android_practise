@@ -18,7 +18,7 @@ public class ListsPageActivity extends ActionBarActivity {
 
         String[] movies = {"Ramji London Wale", "Dhoom", "Spider Man", "Iron Man", "Captain America"};
 
-        ListAdapter moviesAdapter = new ArrayAdapter<String>(getApplicationContext(), R.layout.activity_lists_page, movies);
+        ListAdapter moviesAdapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_list_item_1, movies);
         ListView movieView = (ListView) findViewById(R.id.sumitListView);
 
         movieView.setAdapter(moviesAdapter);
