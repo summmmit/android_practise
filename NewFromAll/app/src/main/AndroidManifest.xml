@@ -28,6 +28,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.company.my.newfromall.MainActivity" />
         </activity>
+        <activity
+            android:name=".CustomListPage"
+            android:label="@string/title_activity_custom_list_page"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.company.my.newfromall.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

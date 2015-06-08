@@ -6,4 +6,6 @@
     <string name="title_activity_main">Home</string>
     <string name="action_list_view">Lists</string>
     <string name="title_activity_lists_page">Lists Page</string>
+    <string name="title_activity_custom_list_page">Custom Lists</string>
+    <string name="action_custom_list_view">Custom Lists</string>
 </resources>
