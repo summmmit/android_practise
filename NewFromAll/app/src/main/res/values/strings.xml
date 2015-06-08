@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">New From All</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_main">Home</string>
+    <string name="action_list_view">Lists</string>
+    <string name="title_activity_lists_page">Lists Page</string>
+</resources>
