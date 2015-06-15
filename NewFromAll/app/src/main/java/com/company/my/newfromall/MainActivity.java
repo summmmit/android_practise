@@ -35,7 +35,7 @@ public class MainActivity extends ActionBarActivity {
                 openListsPage();
                 return true;
             case R.id.action_custom_list_view:
-                Intent i = new Intent(getApplicationContext(), CustomListPage.class);
+                Intent i = new Intent(getApplicationContext(), CustomListPageActivity.class);
                 startActivity(i);
             default:
                 return super.onOptionsItemSelected(item);
