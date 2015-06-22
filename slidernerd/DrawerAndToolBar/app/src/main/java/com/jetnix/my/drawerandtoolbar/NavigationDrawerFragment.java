@@ -8,11 +8,16 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.Toolbar;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -25,6 +30,8 @@ import android.support.v7.widget.Toolbar;
  */
 public class NavigationDrawerFragment extends Fragment {
 
+    private RecyclerView recyclerView;
+
     private static final String PREF_FILE_NAME = "textpref";
     public static final String KEY_USER_LEARNED_DRAWER = "user_learned_drawer";
     private ActionBarDrawerToggle mdrawerToogle;
@@ -32,6 +39,8 @@ public class NavigationDrawerFragment extends Fragment {
 
     private boolean mUserLearnedDrawer;
     private boolean mFromSavedInstanceState;
+
+    private VivzAdapter adapter;
 
     private View containerView;
 
@@ -53,8 +62,28 @@ public class NavigationDrawerFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        return inflater.inflate(R.layout.fragment_navigation_drawer, container, false);
+        View layout = inflater.inflate(R.layout.fragment_navigation_drawer, container, false);
+
+        recyclerView = (RecyclerView) layout.findViewById(R.id.drawerList);
+        adapter = new VivzAdapter(getActivity(), getData());
+        recyclerView.setAdapter(adapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+
+        return layout;
         //  return super.onCreateView(inflater, container, savedInstanceState);
+    }
+
+    public static List<Information> getData(){
+        List<Information> data = new ArrayList<>();
+        int[] icons = {R.drawable.ic_account, R.drawable.ic_account};
+        String[] titles = {"Sumit", "Singh"};
+        for (int i = 0; i < titles.length && i<icons.length; i++) {
+            Information information = new Information();
+            information.title = titles[i];
+            information.iconId = icons[i];
+            data.add(information);
+        }
+        return data;
     }
 
     public void setUp(int fragmentId, DrawerLayout drawerLayout, Toolbar toolbar) {
