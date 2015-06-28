@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">ChangeActivityWithMode</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string-array name="chapters">
+        <item>Activities</item>
+        <item>Services</item>
+        <item>Content Providers</item>
+        <item>Intents and Intent Filters</item>
+    </string-array>
+
+    <string-array name="description">
+        <item>Activities : all of them</item>
+        <item>Services : all of them</item>
+        <item>Content Providers : all of them</item>
+        <item>Intents and Intent Filters : all of them</item>
+    </string-array>
+    <string name="title_activity_another">AnotherActivity</string>
+    <string name="hello_blank_fragment">hello_fragment_b</string>
+</resources>

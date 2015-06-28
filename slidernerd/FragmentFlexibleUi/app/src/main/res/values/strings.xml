@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">FragmentFlexibleUi</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_blank_fragment">hello_fragment_b</string>
+
+    <string-array name="titles">
+        <item>Activities</item>
+        <item>Services</item>
+        <item>Content Providers</item>
+        <item>Intents and Intent Filters</item>
+    </string-array>
+
+    <string-array name="description">
+        <item>Activities : all of them</item>
+        <item>Services : all of them</item>
+        <item>Content Providers : all of them</item>
+        <item>Intents and Intent Filters : all of them</item>
+    </string-array>
+</resources>
