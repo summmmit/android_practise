@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+    <fragment
+        android:id="@+id/fragment"
+        android:name="com.jetnix.my.calculatorapp.FragmentAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        tools:layout="@layout/fragment_add"
+        android:layout_marginBottom="5dp" />
+
+    <fragment
+        android:id="@+id/fragment2"
+        android:name="com.jetnix.my.calculatorapp.FragmentSubtract"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fragment"
+        android:layout_centerHorizontal="true"
+        tools:layout="@layout/fragment_subtract"
+        android:layout_marginBottom="5dp" />
+
+    <fragment
+        android:id="@+id/fragment3"
+        android:name="com.jetnix.my.calculatorapp.FragmentMultiply"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fragment2"
+        android:layout_centerHorizontal="true"
+        tools:layout="@layout/fragment_multiply"
+        android:layout_marginBottom="5dp" />
+
+    <fragment
+        android:id="@+id/fragment4"
+        android:name="com.jetnix.my.calculatorapp.FragmentDevide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fragment3"
+        android:layout_centerHorizontal="true"
+        tools:layout="@layout/fragment_devide" />
+
+    <fragment
+        android:id="@+id/fragment5"
+        android:name="com.jetnix.my.calculatorapp.FragmentResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        tools:layout="@layout/fragment_result"
+        android:layout_marginTop="65dp" />
+</RelativeLayout>

@@ -1,0 +1,7 @@
+<android.support.v4.view.ViewPager xmlns:android="http://schemas.android.com/apk/res-auto"
+    id="@+id/pager"
+    layout_height="match_parent"
+    layout_width="match_parent"
+    xmlns="http://schemas.android.com/apk/res/android">
+
+</android.support.v4.view.ViewPager>
