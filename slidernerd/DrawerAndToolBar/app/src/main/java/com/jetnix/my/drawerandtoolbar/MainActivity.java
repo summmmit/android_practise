@@ -1,5 +1,6 @@
 package com.jetnix.my.drawerandtoolbar;
 
+import android.content.Intent;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
@@ -42,7 +43,8 @@ public class MainActivity extends ActionBarActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_sub_activity) {
+            startActivity(new Intent(this, SubActivity.class));
             return true;
         }
 

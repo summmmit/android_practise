@@ -1,0 +1,40 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.jetnix.my.fragmentbackstack.DialogueFragment"
+    android:padding="20dp"
+    android:background="#ff85ff9a">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Do You like this Dialogue ??"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No"
+        android:id="@+id/dialogue_no"
+        android:layout_marginTop="51dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView"
+        android:layout_marginLeft="50dp"
+        android:layout_marginStart="50dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Yes"
+        android:id="@+id/dialogue_yes"
+        android:layout_alignTop="@+id/dialogue_no"
+        android:layout_toRightOf="@+id/dialogue_no"
+        android:layout_toEndOf="@+id/dialogue_no"
+        android:layout_marginLeft="40dp"
+        android:layout_marginStart="40dp" />
+</RelativeLayout>

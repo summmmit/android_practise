@@ -1,0 +1,32 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/fragment_result"
+    android:padding="10dp"
+    tools:context="com.jetnix.my.calculatorapp.FragmentResult"
+    android:background="#ff74ffce">
+
+    <TextView
+        android:id="@+id/fragment_result_text_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/result"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/fragment_result_button_clear"
+        android:layout_toStartOf="@+id/fragment_result_button_clear"
+        android:layout_marginRight="104dp"
+        android:layout_marginEnd="104dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/clear"
+        android:id="@+id/fragment_result_button_clear"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:ellipsize="end" />
+
+</RelativeLayout>

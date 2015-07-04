@@ -1,0 +1,44 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_add"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffefab"
+    android:padding="20dp"
+    tools:context="com.jetnix.my.calculatorapp.FragmentAdd">
+
+    <EditText
+        android:id="@+id/fragment_add_editText_x"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.01"
+        android:hint="@string/x"
+        android:gravity="center_horizontal"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/fragment_add_textView_sign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/plus"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/fragment_add_editText_y"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.01"
+        android:hint="@string/y"
+        android:gravity="center_horizontal"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/fragment_add_button_calculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="0dp"
+        android:text="@string/equalTo" />
+
+</LinearLayout>

@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">CalculatorApp</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="x">X</string>
+    <string name="y">Y</string>
+    <string name="result">Result</string>
+    <string name="plus">+</string>
+    <string name="equalTo">Calculate</string>
+    <string name="result_button">fragment_add_equalTo</string>
+    <string name="sub">-</string>
+    <string name="mul">*</string>
+    <string name="dev">/</string>
+    <string name="clear">Clear</string>
+</resources>
