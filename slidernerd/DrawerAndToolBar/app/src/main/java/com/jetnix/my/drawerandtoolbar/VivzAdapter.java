@@ -38,6 +38,8 @@ public class VivzAdapter extends RecyclerView.Adapter<VivzAdapter.MyViewHolder> 
         Information current = data.get(i);
         viewHolder.title.setText(current.title);
         viewHolder.icon.setImageResource(current.iconId);
+
+
     }
 
     @Override

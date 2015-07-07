@@ -10,6 +10,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,15 +20,6 @@ import android.support.v7.widget.Toolbar;
 import java.util.ArrayList;
 import java.util.List;
 
-
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link NavigationDrawerFragment.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link NavigationDrawerFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class NavigationDrawerFragment extends Fragment {
 
     private RecyclerView recyclerView;
@@ -50,6 +42,8 @@ public class NavigationDrawerFragment extends Fragment {
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
+
+        Log.d("check", "hello this is oncreate");
         super.onCreate(savedInstanceState);
         mUserLearnedDrawer = Boolean.valueOf(readFromPreferences(getActivity(), KEY_USER_LEARNED_DRAWER, "false"));
 
@@ -69,14 +63,16 @@ public class NavigationDrawerFragment extends Fragment {
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
+        Log.d("check", "hello this is oncreateView");
+
         return layout;
         //  return super.onCreateView(inflater, container, savedInstanceState);
     }
 
     public static List<Information> getData(){
         List<Information> data = new ArrayList<>();
-        int[] icons = {R.drawable.ic_account, R.drawable.ic_account};
-        String[] titles = {"Sumit", "Singh"};
+        int[] icons = {R.drawable.ic_number1, R.drawable.ic_number2, R.drawable.ic_number3, R.drawable.ic_number4};
+        String[] titles = {"Sumit", "Singh", "shivi", "Hello"};
         for (int i = 0; i < titles.length && i<icons.length; i++) {
             Information information = new Information();
             information.title = titles[i];
