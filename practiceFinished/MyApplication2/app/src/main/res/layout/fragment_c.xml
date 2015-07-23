@@ -1,0 +1,43 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.jetnix.my.simplepagesandfragments.CFragment">
+
+    <LinearLayout
+        android:id="@+id/resultButtonGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fffcff9f"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:visibility="visible">
+
+
+        <TextView
+            android:id="@+id/textViewResultChoice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:text="@string/textViewResultChoice"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <Button
+            android:id="@+id/buttonShowResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:text="Show Result" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Go Back To Voting"
+            android:id="@+id/textViewBackToVotingFromResultButton"
+            android:layout_gravity="right" />
+
+    </LinearLayout>
+</FrameLayout>

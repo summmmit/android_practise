@@ -1,0 +1,64 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.jetnix.my.simplepagesandfragments.AFragment"
+    android:background="#ff9092ff">
+
+
+    <LinearLayout
+        android:id="@+id/choiceGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ff96ff8c"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:text="@string/textviewChoice"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+
+            <ImageButton
+                android:id="@+id/fragmentAImageButtonCat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/imageButtonCat"
+                android:src="@drawable/ic_action" />
+
+
+            <ImageButton
+                android:id="@+id/fragmentAImageButtonHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="15dp"
+                android:contentDescription="@string/imageButtonHome"
+                android:src="@drawable/ic_home" />
+
+            <ImageButton
+                android:id="@+id/fragmentAImageButtonChimpangee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:contentDescription="@string/imageButtonChimpangee"
+                android:src="@drawable/ic_chimpangee" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+    
+</RelativeLayout>
