@@ -17,8 +17,16 @@ import org.apache.http.params.BasicHttpParams;
 import org.apache.http.params.HttpConnectionParams;
 import org.apache.http.params.HttpParams;
 import org.apache.http.util.EntityUtils;
+import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.io.UnsupportedEncodingException;
+import java.net.URL;
+import java.net.URLConnection;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 
 
@@ -64,23 +72,48 @@ public class ServerRequests {
             Log.v("username", user.username);
             Log.v("password", user.password);
             Log.v("age", user.age + "");
-            ArrayList<NameValuePair> dataToSend = new ArrayList<>();
-            dataToSend.add(new BasicNameValuePair("name", user.name));
-            dataToSend.add(new BasicNameValuePair("username", user.username));
-            dataToSend.add(new BasicNameValuePair("password", user.password));
-            dataToSend.add(new BasicNameValuePair("age", user.age + ""));
 
-            HttpParams httpRequestParams = getHttpRequestParams();
+            String link= SERVER_ADDRESS + "Register.php";
+            String data  = null;
+            try {
+                data = URLEncoder.encode("username", "UTF-8") + "=" + URLEncoder.encode(user.username, "UTF-8");
+                data += "&" + URLEncoder.encode("password", "UTF-8") + "=" + URLEncoder.encode(user.password, "UTF-8");
+                data += "&" + URLEncoder.encode("name", "UTF-8") + "=" + URLEncoder.encode(user.name, "UTF-8");
+                data += "&" + URLEncoder.encode("age", "UTF-8") + "=" + URLEncoder.encode(user.age+"", "UTF-8");
+            } catch (UnsupportedEncodingException e) {
+                e.printStackTrace();
+            }
 
-            HttpClient client = new DefaultHttpClient(httpRequestParams);
-            HttpPost post = new HttpPost(SERVER_ADDRESS  + "Register.php");
+            StringBuilder sb = new StringBuilder();
+            String line = null;
 
             try {
-                post.setEntity(new UrlEncodedFormEntity(dataToSend));
-                client.execute(post);
+
+                URL url = new URL(link);
+                URLConnection conn = url.openConnection();
+
+                conn.setDoOutput(true);
+                OutputStreamWriter wr = new OutputStreamWriter(conn.getOutputStream());
+
+                wr.write(data);
+                wr.flush();
+
+                BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+
+                // Read Server Response
+                while((line = reader.readLine()) != null)
+                {
+                    sb.append(line);
+                    break;
+                }
+
+
             } catch (Exception e) {
                 e.printStackTrace();
             }
+
+            Log.v("result", sb+"");
+
 
             return null;
         }
@@ -114,50 +147,70 @@ public class ServerRequests {
 
         @Override
         protected User doInBackground(Void... params) {
-            ArrayList<NameValuePair> dataToSend = new ArrayList<>();
-            dataToSend.add(new BasicNameValuePair("username", user.username));
-            dataToSend.add(new BasicNameValuePair("password", user.password));
 
-            HttpParams httpRequestParams = new BasicHttpParams();
-            HttpConnectionParams.setConnectionTimeout(httpRequestParams,
-                    CONNECTION_TIMEOUT);
-            HttpConnectionParams.setSoTimeout(httpRequestParams,
-                    CONNECTION_TIMEOUT);
+            String link= SERVER_ADDRESS + "FetchUserData.php";
+            String data  = null;
+            try {
+                data = URLEncoder.encode("username", "UTF-8") + "=" + URLEncoder.encode(user.username, "UTF-8");
+                data += "&" + URLEncoder.encode("password", "UTF-8") + "=" + URLEncoder.encode(user.password, "UTF-8");
+            } catch (UnsupportedEncodingException e) {
+                e.printStackTrace();
+            }
 
-            HttpClient client = new DefaultHttpClient(httpRequestParams);
-            HttpPost post = new HttpPost(SERVER_ADDRESS
-                    + "FetchUserData.php");
+            StringBuilder sb = new StringBuilder();
+            String line = null;
 
+            try {
+
+                URL url = new URL(link);
+                URLConnection conn = url.openConnection();
+
+                conn.setDoOutput(true);
+                OutputStreamWriter wr = new OutputStreamWriter(conn.getOutputStream());
+
+                wr.write(data);
+                wr.flush();
+
+                BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+
+                // Read Server Response
+                while((line = reader.readLine()) != null)
+                {
+                    sb.append(line);
+                    break;
+                }
+
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+            String jsonCode = sb.toString();
+            Log.v("happened", jsonCode);
+
+            JSONObject jObject = null;
             User returnedUser = null;
 
             try {
-                post.setEntity(new UrlEncodedFormEntity(dataToSend));
-                HttpResponse httpResponse = client.execute(post);
-
-                HttpEntity entity = httpResponse.getEntity();
-                String result = EntityUtils.toString(entity);
-                Log.d("result", result);
-                JSONObject jObject = new JSONObject(result);
+                jObject = new JSONObject(jsonCode);
 
                 if (jObject.length() != 0){
                     Log.v("happened", "2");
                     String name = jObject.getString("name");
                     int age = jObject.getInt("age");
 
-                    returnedUser = new User(name, age, user.username,
-                            user.password);
+                    returnedUser = new User(name, age, user.username, user.password);
                 }
-
-            } catch (Exception e) {
+            } catch (JSONException e) {
                 e.printStackTrace();
             }
-
             return returnedUser;
         }
 
         @Override
         protected void onPostExecute(User returnedUser) {
             super.onPostExecute(returnedUser);
+            Log.v("returnedUser", returnedUser.name);
             progressDialog.dismiss();
             userCallBack.done(returnedUser);
         }

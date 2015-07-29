@@ -44,4 +44,28 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         }
 
     }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        if (authenticate() == true) {
+            displayUserDetails();
+        }
+    }
+
+    private boolean authenticate() {
+        if (userLocalStore.getLoggedInUser() == null) {
+            Intent intent = new Intent(this, LoginActivity.class);
+            startActivity(intent);
+            return false;
+        }
+        return true;
+    }
+
+    private void displayUserDetails() {
+        User user = userLocalStore.getLoggedInUser();
+        etUsername.setText(user.username);
+        etName.setText(user.name);
+        etAge.setText(user.age + "");
+    }
 }

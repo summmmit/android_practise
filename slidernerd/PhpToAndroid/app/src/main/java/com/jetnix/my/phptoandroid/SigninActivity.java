@@ -73,9 +73,11 @@ public class SigninActivity extends AsyncTask<String, Void, String> {
                 Log.d("username", username);
                 Log.d("password", password);
 
-                String link="http://10.0.2.2/projects/android/slidernerd/PhpToAndroid/php/getdata.php";
+                String link="http://10.0.2.2/projects/android/AndroidToPhpConnect/FetchUserData.php";
                 String data  = URLEncoder.encode("username", "UTF-8") + "=" + URLEncoder.encode(username, "UTF-8");
                 data += "&" + URLEncoder.encode("password", "UTF-8") + "=" + URLEncoder.encode(password, "UTF-8");
+
+                Log.d("data", data+"");
 
                 URL url = new URL(link);
                 URLConnection conn = url.openConnection();
@@ -97,6 +99,8 @@ public class SigninActivity extends AsyncTask<String, Void, String> {
                     sb.append(line);
                     break;
                 }
+
+                Log.d("sb", sb+"");
                 return sb.toString();
             }
             catch(Exception e){
