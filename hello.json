@@ -1,0 +1,8 @@
+$var = array(
+
+'name' => 'Sumit Singh',
+'city' => 'Tokyo'
+);
+
+
+return json_encode($var);

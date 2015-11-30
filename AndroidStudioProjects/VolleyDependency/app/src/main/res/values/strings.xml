@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">VolleyDependency</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_list_view">ListViewActivity</string>
+    <string name="action_listView">List View</string>
+
+    <string-array name="mobileArray">
+        <item>Android</item>
+        <item>Iphone</item>
+        <item>Windows</item>
+        <item>Ubuntu</item>
+        <item>Mozzila</item>
+        <item>Bada</item>
+        <item>Symbian</item>
+    </string-array>
+    <string name="title_activity_custom_adapter_list_view">CustomAdapterListViewActivity</string>
+    <string name="action_custon_listView">CustomList View</string>
+</resources>
