@@ -143,7 +143,7 @@ public class NavigationDrawerFragment extends Fragment {
 
     }
 
-    static class RecyclerTouchListener implements RecyclerView.OnItemTouchListener{
+     static class RecyclerTouchListener implements RecyclerView.OnItemTouchListener{
 
         private GestureDetector gestureDetector;
 
@@ -191,7 +191,12 @@ public class NavigationDrawerFragment extends Fragment {
         public void onTouchEvent(RecyclerView rv, MotionEvent e) {
 
         }
-    }
+
+         @Override
+         public void onRequestDisallowInterceptTouchEvent(boolean disallowIntercept) {
+
+         }
+     }
 
     public static interface ClickListener{
 
