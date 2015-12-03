@@ -22,13 +22,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ListViewActivity"
+            android:name=".ListView.ListViewActivity"
             android:label="@string/title_activity_list_view"
-            android:theme="@style/AppTheme.NoActionBar" >
-        </activity>
-        <activity
-            android:name=".ListView.CustomAdapterListViewActivity"
-            android:label="@string/title_activity_custom_adapter_list_view"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
         <activity

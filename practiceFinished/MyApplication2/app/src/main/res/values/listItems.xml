@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string-array name="listViewItems">
-        <item>Voting Activity</item>
-        <item>MultiFragment Activity</item>
-        <item>Custom Adapter List View</item>
-    </string-array>
-</resources>
