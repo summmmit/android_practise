@@ -19,6 +19,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.jetnixx.volleydependency.ListView.CustomAdapterListViewActivity;
 import com.example.jetnixx.volleydependency.ListView.ListViewActivity;
+import com.example.jetnixx.volleydependency.RecyclerView.RecycleActivity;
 import com.example.jetnixx.volleydependency.network.VolleySingleton;
 
 public class MainActivity extends AppCompatActivity {
@@ -100,6 +101,12 @@ public class MainActivity extends AppCompatActivity {
         if (id == R.id.action_CustomListView) {
 
             intent = new Intent(this, CustomAdapterListViewActivity.class);
+            startActivity(intent);
+        }
+
+        if (id == R.id.action_recycler_view) {
+
+            intent = new Intent(this, RecycleActivity.class);
             startActivity(intent);
         }
 

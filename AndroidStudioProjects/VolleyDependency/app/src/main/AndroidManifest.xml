@@ -31,6 +31,16 @@
             android:label="@string/title_activity_custom_adapter_list_view"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
+        <activity
+            android:name=".RecyclerView.RecycleActivity"
+            android:label="@string/title_activity_recycle"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".Pages.ProfileActivity"
+            android:label="@string/title_activity_profile"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
     </application>
 
 </manifest>

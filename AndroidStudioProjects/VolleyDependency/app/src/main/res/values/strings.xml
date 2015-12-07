@@ -15,4 +15,7 @@
     </string-array>
     <string name="title_activity_custom_adapter_list_view">CustomAdapterListViewActivity</string>
     <string name="action_custon_listView">CustomList View</string>
+    <string name="title_activity_recycle">RecycleActivity</string>
+    <string name="action_custon_RecyclerView">Recycler View</string>
+    <string name="title_activity_profile">ProfileActivity</string>
 </resources>

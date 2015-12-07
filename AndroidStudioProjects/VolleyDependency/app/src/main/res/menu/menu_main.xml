@@ -20,4 +20,10 @@
         android:orderInCategory="200"
         android:title="@string/action_custon_listView"
         app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_recycler_view"
+        android:orderInCategory="300"
+        android:title="@string/action_custon_RecyclerView"
+        app:showAsAction="never" />
 </menu>
